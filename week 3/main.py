@@ -9,13 +9,11 @@ def getDayOfTheWeekForUserDate():
 
     dow.getDayOfTheWeek(year, month, day, offset)
 
-def program():
+def program(): #simple interface
     decision = 0
 
     while decision != 3:
-        print("(1) Get day of the week for a specific date")
-        print("(2) Get day of the week for an entire year")
-        print("(3) Exit")
+        print("(1) Get day of the week for a specific date\n(2) Get day of the week for an entire year\n(3) Exit")
 
         decision = int(input("Input: "))
 

@@ -7,7 +7,7 @@ def getoffset(year):
     offset = (year % 1600) // 100
     return offset
 
-def getDayOfTheWeek(year, month, day, offset):
+def getDayOfTheWeek(year, month, day, offset): #day of the week calculation
     decade = year % 100
 
     step1 = decade // 12
@@ -17,7 +17,7 @@ def getDayOfTheWeek(year, month, day, offset):
 
     leap_adjustment = 0
 
-    if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
+    if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0): #leap year checker and adjustment
         if month <= 2:
             leap_adjustment = -1
 
@@ -26,7 +26,7 @@ def getDayOfTheWeek(year, month, day, offset):
 
     print(f"{year}-{month}-{day} is a {dotw_index[result]}")
 
-def dateoverflow(month, day, year):
+def dateoverflow(month, day, year): #converting to date format
     overflow = day_overflow[month - 1]
 
     if month == 2:
@@ -39,7 +39,7 @@ def dateoverflow(month, day, year):
 
     return month, day
 
-def makeCalendar(year, offset):
+def makeCalendar(year, offset): #loop from the start to the end of the year
     month = 1
     day = 1
 
