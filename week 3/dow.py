@@ -1,5 +1,5 @@
 month_index = [1, 4, 4, 0, 2, 5, 0, 3, 6, 1, 4, 6]
-dotw_index = ["sat", "sun", "mon", "tues", "weds", "thurs", "fri"]
+dotw_index = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 offset_index = [6, 4, 2, 0, 6, 4]
 day_overflow = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
