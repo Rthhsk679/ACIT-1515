@@ -19,9 +19,7 @@ def program(): #simple interface
     decision = 0
 
     while decision != 3:
-        print(" \n(1) Get day of the week for a specific date\n(2) Get day of the week for an entire year\n(3) Exit\n\nNote: month works with both string and int!")
-
-        decision = int(input("Input: "))
+        decision = int(input(" \n(1) Get day of the week for a specific date\n(2) Get day of the week for an entire year\n(3) Exit\n\nInput: "))
 
         if decision == 1:
             getDayOfTheWeekForUserDate()
