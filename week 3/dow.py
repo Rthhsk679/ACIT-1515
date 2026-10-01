@@ -1,4 +1,5 @@
 month_index = [1, 4, 4, 0, 2, 5, 0, 3, 6, 1, 4, 6]
+monthDict = {"January": 1, "February": 2, "March": 3, "April": 4, "May": 5, "June": 6, "July": 7, "August": 8, "September": 9, "October": 10, "November": 11, "December": 12}
 dotw_index = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 offset_index = [6, 4, 2, 0, 6, 4]
 day_overflow = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -35,6 +36,7 @@ def dateoverflow(month, day, year): #converting to date format
         day -= day_overflow[month - 1]
         month += 1
 
+    day_overflow[1] = 28
     return month, day
 
 def makeCalendar(year, offset): #loop from the start to the end of the year
