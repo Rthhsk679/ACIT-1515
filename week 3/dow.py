@@ -27,14 +27,12 @@ def getDayOfTheWeek(year, month, day, offset): #day of the week calculation
     print(f"{year}-{month}-{day} is a {dotw_index[result]}")
 
 def dateoverflow(month, day, year): #converting to date format
-    overflow = day_overflow[month - 1]
 
-    if month == 2:
-        if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0):
-            overflow = 29
+    if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0): #leap year adjustment for date format
+            day_overflow[1] = 29
 
-    if day > overflow:
-        day -= overflow
+    if day > day_overflow[month - 1]:
+        day -= day_overflow[month - 1]
         month += 1
 
     return month, day
