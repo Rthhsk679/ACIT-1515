@@ -4,7 +4,7 @@ dotw_index = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"
 offset_index = [6, 4, 2, 0, 6, 4]
 day_overflow = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-def getoffset(year):
+def getoffset(year): #converts century to 0 - 5 starting from 1600 - 2100
     offset = (year % 1600) // 100
     return offset
 
@@ -27,7 +27,7 @@ def getDayOfTheWeek(year, month, day, offset): #day of the week calculation
 
     print(f"{year}-{month}-{day} is a {dotw_index[result]}")
 
-def dateoverflow(month, day, year): #converting to date format
+def dateoverflow(month, day, year): #converting to date format (1-32 becomes 2-1)
 
     if year % 400 == 0 or (year % 4 == 0 and year % 100 != 0): #leap year adjustment for date format
             day_overflow[1] = 29

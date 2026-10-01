@@ -1,6 +1,6 @@
 import dow
 
-def getDayOfTheWeekForUserDate():
+def getDayOfTheWeekForUserDate(): #user input day, month, year
     year = int(input("Year: "))
 
     monthinput = (input("Month: ").capitalize()) #To let inputed month be either string or int
