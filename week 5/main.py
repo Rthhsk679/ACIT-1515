@@ -1,8 +1,5 @@
 from menu_data import csv_text
 
-def get_name(item):
-    return item[0]
-
 def split(text): #splits string into dictionary
     menu = {}
 
