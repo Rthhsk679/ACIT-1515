@@ -25,7 +25,7 @@ def getDayOfTheWeek(year, month, day, offset): #day of the week calculation
     result = (step1 + step2 + step3 + day + step5
               + offset_index[offset] + leap_adjustment) % 7
 
-    print(f"{year}-{month}-{day} is a {dotw_index[result]}")
+    print(f"{year}-{month}-{day} is a {dotw_index[result]}") #the print output
 
 def dateoverflow(month, day, year): #converting to date format (1-32 becomes 2-1)
 
