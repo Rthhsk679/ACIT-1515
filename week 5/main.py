@@ -9,6 +9,10 @@ def split(text): #splits string into dictionary
         menu.setdefault(meal_type.capitalize(), []).append((name, quantity, cost))
         #.setdefault adds meal_type as a key if it does not already exist. Then append the 3 values to the key.
     return menu
+    #output: 
+    #{'Lunch': [('bento box b - sashimi', 'box combo', '$9.59'), ('bento box a - chicken teriyaki', 'box combo', '$8.59')], 
+    #'Dinner': [('vegetable sushi', '6 rolls', '$3.50'), ('tuna roll', '3 rolls', '$4.50'), ('roe', '2 rolls', '$3.95')],
+    #'Dessert': [('cheesecake', '1 slice', '$8.00')]}
 
 def format(menu): #organizes the dictionary keys and values into the output lines
     lines = []
