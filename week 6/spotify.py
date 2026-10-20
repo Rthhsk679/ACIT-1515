@@ -1,20 +1,25 @@
-playlist = {
-    "Blinding Lights": {
-        "artist": "The Weeknd",
-        "duration": 200,
-        "plays": 5
-    },
-    "Numb": {
-        "artist": "Linkin Park",
-        "duration": 187,
-        "plays": 8
-    },
-    "Shape Of You": {
-        "artist": "Ed Sheeran",
-        "duration": 234,
-        "plays": 3
+playlist = {}
+
+def insert_example():
+    example = {
+        "Blinding Lights": {
+            "artist": "The Weeknd",
+            "duration": 200,
+            "plays": 5
+        },
+        "Numb": {
+            "artist": "Linkin Park",
+            "duration": 187,
+            "plays": 8
+        },
+        "Shape Of You": {
+            "artist": "Ed Sheeran",
+            "duration": 234,
+            "plays": 3
+        }
     }
-}
+    playlist.update(example)
+    input("Playlist added...")
 
 def add_song():
     title = input("title: ").title()
@@ -30,7 +35,7 @@ def add_song():
 def record_listen():
     title = input("title: ").title()
     if title not in playlist:
-        print("No song found")
+        input("No song found...")
     else:
         playlist[title]["plays"] += 1
     
@@ -75,6 +80,6 @@ def generate_wrapped():
         {most_song} - {most_artist} ({most_plays} plays)
 
         ==========================================
-        ...
+        Continue...
         """
     )
