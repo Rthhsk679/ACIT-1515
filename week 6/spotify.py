@@ -25,8 +25,6 @@ def add_song():
 
     playlist[title] = {"artist": artist, "duration": duration, "plays": 0}
 
-    print(playlist)
-
     return playlist
 
 def record_listen():
@@ -35,7 +33,6 @@ def record_listen():
         print("No song found")
     else:
         playlist[title]["plays"] += 1
-        print(playlist)
     
     return playlist
 
