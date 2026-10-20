@@ -2,7 +2,7 @@ from spotify import add_song, record_listen, generate_wrapped
 
 def main():
     commands = [add_song, record_listen, generate_wrapped]
-    choice = 5
+    choice = 0
 
     while choice != 4:
         print(
@@ -18,7 +18,7 @@ def main():
         
         if choice < 1 or choice > 4:
             input("invalid input...")
-            choice = 5
+            choice = 0
         elif choice == 4:
             print("Goodbye!")
             break
