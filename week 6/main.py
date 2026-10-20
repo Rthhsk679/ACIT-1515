@@ -2,7 +2,6 @@ from spotify import add_song, record_listen, generate_wrapped
 
 def main():
     commands = [add_song, record_listen, generate_wrapped]
-
     choice = 5
 
     while choice != 4:
@@ -24,6 +23,6 @@ def main():
             print("Goodbye!")
             break
         else:
-            commands[choice - 1]()
+            print(commands[choice - 1]())
 
 main()
